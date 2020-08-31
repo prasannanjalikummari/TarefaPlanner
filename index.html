@@ -11,40 +11,80 @@
     <title>Tarefa Planner</title>
   </head>
   <body>
-    <!--Form-->
-    <!--Code written by Anjali on 31st Aug 2020-->
-    <form id="form">
-      <div class="form-group">
-          <label for="nameFormControlInput">Name</label>
-          <input type="text" class="form-control" id="nameFormControlInput" placeholder="e.g John Smith">
-      </div>
-      <div class="form-group">
-          <!-- <label for="descriptionFormControlTextArea">Description</label> -->
-          <textarea class="form-control" id="descriptionFormControlTextArea" placeholder="Description" row="4"></textarea>
-      </div>
-      <div class="form-group">
-          <label for="emailFormControlInput">Assign To</label>
-          <input type="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Status
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">TODO</a></li>
-          <li><a href="#">In Progress</a></li>
-          <li><a href="#">Review</a></li>
-          <li><a href="#">Done</a></li>
-        </ul>
-      </div> 
-      <div id="datepicker" style="display:flex; justify-content:center;">
-        <label for="duedate">Due Date  </label>
-        <input type="datetime-local" id="duedate" name="duedate">
-      </div>
-       
-    </form>
-    <div class="container">
-    </div>
 
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand d-lg-none" href="#home">Tarefa Planner</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigations"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navigations">
+        <div class="row w-100">
+          <div class="col-6 navbar-nav pr-0 d-none d-lg-block"><a class="navbar-brand mr-0" href="#home">Tarefa Planner</a></div>
+          <div class="col-6 pr-lg-0">
+            <ul class="navbar-nav justify-content-end">
+              <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+              <!--<li class="nav-item"><a class="nav-link" href="#login">Login</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light mt-5">
+        <div class="row w-100">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">All Items</a></li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">+ New</button></li>
+              </ul>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNew" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addNew">New Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--Code written by Anjali on 31st Aug 2020-->
+              <form id="form">
+                <div class="form-group">
+                    <label for="nameFormControlInput">Name</label>
+                    <input type="text" class="form-control" id="nameFormControlInput" placeholder="e.g John Smith">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="descriptionFormControlTextArea" placeholder="Description" row="4"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="emailFormControlInput">Assign To</label>
+                  <input type="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Status
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">TODO</a></li>
+                      <li><a href="#">In Progress</a></li>
+                      <li><a href="#">Review</a></li>
+                      <li><a href="#">Done</a></li>
+                    </ul>
+                  </div> 
+                  <div id="datepicker" style="display:flex; justify-content:center;">
+                    <label for="duedate">Due Date  </label>
+                    <input type="datetime-local" id="duedate" name="duedate">
+                  </div>
+              </form>
+           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -52,4 +92,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
-
