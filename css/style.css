@@ -5,6 +5,12 @@
 #90e0ef
 #caf0f8 */
 
-.card {
-    width: 400px;
+.card-deck .row .card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card-deck > .row {
+    width: 100%;
+    padding: 0px 20px;
 }
