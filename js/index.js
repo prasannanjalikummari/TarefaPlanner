@@ -1,4 +1,4 @@
-const taskM = new taskManager();
+const taskM = new taskManager();   //taskM is an instance of taskManager
 
 //Form
 const form = document.querySelector('#form');
@@ -22,6 +22,7 @@ form.addEventListener('submit', (event) => {
     const dueDate = inputDueDate.value;
 
     taskM.addTask(name, description, AssignedTo, dueDate);
+    taskM.render();
 
     inputName.value = '';
     inputDescription.value = '';
@@ -63,8 +64,8 @@ function validateTaskForm() {
 
     //Date
     // const currentDate = new Date();
-    // const inputdate = inputDueDate.value;  /** in the form of 2020-9-11 */
-    // let partOfInputDate = inputdate.split("-");
+    // const inputDate = inputDueDate.value;  /** in the form of 2020-9-11 */
+    // let partOfInputDate = inputDate.split("-");
     // if (Number(partOfInputDate[0]) > currentDate.getUTCFullYear) {
     //     console.log("Future Year");
     // }
@@ -84,11 +85,13 @@ function clearValidation(control) {
 }
 
 //Testing the code
-// const taskMng = new taskManager();
+ //const taskMng = new taskManager();
 // taskMng.addTask('Test', 'It\`s a test', 'Aline', '16/09/20');
 // console.log(taskMng.tasks);
-// let taskHtml = createTaskHtml('Test2', 'This is also a test.', 'Babs', '16/09/20', 'TODO');
-// console.log(taskHtml);
+ //let taskHtml = createTaskHtml('Task2', 'Breakfast', 'Aline', '17/09/2020', 'TODO');
+ //console.log(taskHtml);
+ //let taskHtml = createTaskHtml('Task2', 'Breakfast', 'Aline', '17/09/2020', 'TODO');
+ //console.log(taskMng.render());
 
 
 
