@@ -19,6 +19,9 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
                         <a href="#" class="btn btn-danger">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </a>
+                        <a href="#" class="btn btn-info done-button" role ="button">Mark as Done
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        </a>
                     </div>
                     <div class="card-footer text-muted">
                         ${assignedTo}
