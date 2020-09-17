@@ -13,6 +13,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
                             <i class="fa fa-calendar" aria-hidden="true"></i>
                             ${dueDate}
                         </p>
+                        <button class="done-botton" type="button">Mark as Done</button>
                         <a href="#" class="btn btn-primary">
                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                         </a>
