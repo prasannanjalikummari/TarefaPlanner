@@ -1,4 +1,4 @@
-const taskM = new taskManager();   //taskM is an instance of taskManager
+const taskM = new TaskManager();   //taskM is an instance of taskManager
 
 //Form
 const form = document.querySelector('#form');
@@ -18,10 +18,10 @@ form.addEventListener('submit', (event) => {
 
     const name = inputName.value;
     const description = inputDescription.value;
-    const AssignedTo = inputAssignTo.value;
+    const assignedTo = inputAssignTo.value;
     const dueDate = inputDueDate.value;
 
-    taskM.addTask(name, description, AssignedTo, dueDate);
+    taskM.addTask(name, description, assignedTo, dueDate);
     taskM.render();
 
     inputName.value = '';
@@ -84,14 +84,7 @@ function clearValidation(control) {
     control.classList.remove('is-valid');
 }
 
-//Testing the code
- //const taskMng = new taskManager();
-// taskMng.addTask('Test', 'It\`s a test', 'Aline', '16/09/20');
-// console.log(taskMng.tasks);
- //let taskHtml = createTaskHtml('Task2', 'Breakfast', 'Aline', '17/09/2020', 'TODO');
- //console.log(taskHtml);
- //let taskHtml = createTaskHtml('Task2', 'Breakfast', 'Aline', '17/09/2020', 'TODO');
- //console.log(taskMng.render());
+
 
 
 
