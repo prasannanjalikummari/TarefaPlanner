@@ -3,8 +3,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
         <div class="col-md-12 col-lg-4">
             <div class="card" data-task-id=${id}>
                 <div class="text-center border-info">
-                    <div class="card-header">
-                        ${status}
+                    <div class="card-header ${status === 'TODO' ? 'bg-warning' : 'bg-success'}">
+                        <span class="text-white">${status}</span>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title display-4">${name}</h5>
@@ -18,8 +18,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
                         </a>
                         <a href="#" class="btn btn-danger">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="btn btn-info done-button" role ="button">Mark as Done
+                        </a></br></br>
+                        <a href="#" class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" role ="button">Mark as Done
                         <i class="fa fa-check" aria-hidden="true"></i>
                         </a>
                     </div>
