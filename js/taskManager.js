@@ -1,7 +1,7 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
+const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
     return `
         <div class="col-md-12 col-lg-4">
-            <div class="card">
+            <div class="card" data-task-id=${id}>
                 <div class="text-center border-info">
                     <div class="card-header">
                         ${status}
@@ -57,6 +57,7 @@ class TaskManager {
             const date = new Date(task.dueDate);
             const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
             const taskHTML = createTaskHtml(
+                task.id,
                 task.name,
                 task.description,
                 task.assignedTo,
