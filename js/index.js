@@ -84,8 +84,15 @@ function clearValidation(control) {
     control.classList.remove('is-valid');
 }
 
+const tasksList = document.querySelector('#tasksList');
 
 
+tasksList.addEventListener('click', (event) => {
+    if(event.target.classList.contains('done-button')) {
+        const parentTask = event.target.parentElement.parentElement.parentElement;  
+        console.log(parentTask); 
+    }
+});
 
 
 

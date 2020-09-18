@@ -1,4 +1,4 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
+const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
     return `
         <div class="col-md-12 col-lg-4">
             <div class="card">
@@ -13,7 +13,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
                             <i class="fa fa-calendar" aria-hidden="true"></i>
                             ${dueDate}
                         </p>
-                        <button class="done-botton" type="button">Mark as Done</button>
+                        <button class="done-button btn btn-primary" type="button">Mark as Done</button>
                         <a href="#" class="btn btn-primary">
                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                         </a>
