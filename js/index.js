@@ -1,4 +1,4 @@
-const taskM = new TaskManager(); //taskM is an instance of taskManager
+const taskM = new TaskManager(); 
 
 //Form
 const form = document.querySelector("#form");
@@ -24,6 +24,8 @@ form.addEventListener("submit", (event) => {
   const dueDate = inputDueDate.value;
 
   taskM.addTask(name, description, assignedTo, dueDate);
+
+  taskM.save();
   taskM.render();
 
   inputName.value = "";
