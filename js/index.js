@@ -87,6 +87,8 @@ function clearValidation(control) {
   control.classList.remove("is-valid");
 }
 
+//Buttons
+
 const taskList = document.querySelector("#tasksList");
 taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("done-button")) {
@@ -96,4 +98,13 @@ taskList.addEventListener("click", (event) => {
     task.status = 'DONE';
     taskM.render();
   }
+  if (event.target.classList.contains("delete-button")) {
+    const parentTask = event.target.parentElement.parentElement.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    taskM.deleteTask(taskId);
+    taskM.save();
+    taskM.render();
+  }
 });
+
+
