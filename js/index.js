@@ -1,4 +1,6 @@
 const taskM = new TaskManager(); 
+taskM.load();
+taskM.render();
 
 //Form
 const form = document.querySelector("#form");
