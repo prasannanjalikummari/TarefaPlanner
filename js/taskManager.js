@@ -9,23 +9,18 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
                     <div class="card-body">
                         <h5 class="card-title display-4">${name}</h5>
                         <p class="card-text mt-2">${description}</p>
-                        <p class="card-text mt-5">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            ${dueDate}
-                        </p>
-                        <a href="#" class="btn btn-primary">
+                        <p class="card-text mt-5"><i class="fa fa-calendar" aria-hidden="true"></i>${dueDate}</p>
+                        <button href="#" class="btn btn-primary">
                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        </a>
+                        </button>
                         <button type="button" class="btn btn-danger delete-button">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </button></br></br>
-                        <a href="#" class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" role ="button">Mark as Done
+                        <button class="btn btn-info done-button ${status === 'TODO' ? 'visible' : 'invisible'}" role ="button">Mark as Done
                         <i class="fa fa-check" aria-hidden="true"></i>
-                        </a>
+                        </button>
                     </div>
-                    <div class="card-footer text-muted">
-                        ${assignedTo}
-                    </div>
+                    <div class="card-footer text-muted">${assignedTo}</div>
                 </div>
             </div>
         </div>
