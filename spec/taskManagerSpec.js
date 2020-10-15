@@ -188,12 +188,9 @@ describe('TaskManager', () => {
                 };
 
                 taskManager.addTask(task.name, task.description, task.assignedTo, task.dueDate);
-
                 const tasksList = { innerHTML: '' };
 
-                //spy on querySelector so we can check the tasklist innerHTML later
                 spyOn(document, 'querySelector').and.returnValue(tasksList);
-
                 taskManager.render();
 
                 //test taskList html has rendered correctly
@@ -203,7 +200,6 @@ describe('TaskManager', () => {
                 expect(tasksList.innerHTML).toContain('<p class="card-text mt-2">description</p>');
                 expect(tasksList.innerHTML).toContain('<div class="card-footer text-muted">assignedTo@assignedTo.com</div>');
                 expect(tasksList.innerHTML).toContain('<p class="card-text mt-5"><i class="fa fa-calendar" aria-hidden="true"></i>2/10/2020</p>');
-                //Don't know how to test date
             });
         });
     });

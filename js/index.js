@@ -36,6 +36,10 @@ form.addEventListener("submit", (event) => {
   inputDueDate.value = "";
 });
 
+ // close the modal by toggling
+ $("#addNew").modal("toggle");
+
+
 formControls.forEach((control) => {
   control.addEventListener("focus", (event) => {
     clearValidation(control);
