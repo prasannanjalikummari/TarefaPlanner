@@ -20,6 +20,7 @@
 </head>
 
 <body>
+  <!--Main navbar - Heading-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand d-lg-none" href="#home">Tarefa Planner</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigations"><span
@@ -37,7 +38,8 @@
       </div>
     </div>
   </nav>
-
+  
+  <!--New Task navbar-->
   <nav class="navbar navbar-expand-lg navbar-light mt-5">
     <div class="row w-100">
       <ul class="navbar-nav">
@@ -58,7 +60,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <!--Code written by Anjali on 31st Aug 2020-->
+          <!--Form-->
           <form id="form">
             <div class="form-group">
               <label for="nameFormControlInput">Name</label>
@@ -87,7 +89,6 @@
               <input type="date" id="duedate" name="duedate" value="" min="2020-09-11">
             </div>
           </form>
-          <!--Code written by Anjali on 31st Aug 2020-->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -97,14 +98,14 @@
     </div>
   </div>
 
-  <!--Cards and card deck implementation for symmetric layout of cards-->
+  <!--Cards-->
 
   <div class="card-deck">
     <div class="row d-flex-wrap" id="tasksList">
     </div>
   </div>
 
-
+  <!--Js-->
   <script src="js/taskManager.js"></script>
   <script src="js/index.js"></script>
   
