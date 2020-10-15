@@ -34,6 +34,9 @@ form.addEventListener("submit", (event) => {
   inputDescription.value = "";
   inputAssignTo.value = "";
   inputDueDate.value = "";
+
+  // close the modal by toggling
+  $("#addNew").modal("toggle");
 });
 
  // close the modal by toggling
