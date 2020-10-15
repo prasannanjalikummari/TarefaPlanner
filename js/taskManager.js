@@ -10,8 +10,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
                         <h5 class="card-title display-4">${name}</h5>
                         <p class="card-text mt-2">${description}</p>
                         <p class="card-text mt-5"><i class="fa fa-calendar" aria-hidden="true"></i>${dueDate}</p>
-                        <button href="#" class="btn btn-primary">
-                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                        <button href="#" class="btn btn-secondary">
+                            <i class="fa fa-file-text-o text-muted" aria-hidden="true"></i>
                         </button>
                         <button type="button" class="btn btn-danger delete-button">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
